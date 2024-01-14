@@ -9,12 +9,13 @@ import UIKit
 import Kingfisher
 
 class MainViewController: UIViewController {
-	
+
 	var filterFriend: [ChatRoom] {
 		if !searchbar.text!.isEmpty {
-			return mockChatList.filter({ $0.chatroomName.contains(searchbar.text!)})
+			return mockChatList.filter({ $0.chatroomName.uppercased().contains(searchbar.text!.uppercased())})
+		} else {
+			return mockChatList
 		}
-		return mockChatList
 	}
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var searchbar: UISearchBar!
@@ -37,7 +38,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		if mockChatList[indexPath.row].chatroomImage.count == 1 {
+		if filterFriend[indexPath.row].chatroomImage.count == 1 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: MainFriendTableViewCell.identfier, for: indexPath) as! MainFriendTableViewCell
 			cell.setFriendTableCell(filterFriend[indexPath.row])
 			return cell
@@ -67,5 +68,11 @@ extension MainViewController: TableViewProtocol {
 	func setDelegate() {
 		tableView.delegate = self
 		tableView.dataSource = self
+	}
+}
+
+extension MainViewController: UISearchBarDelegate {
+	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+		tableView.reloadData()
 	}
 }
