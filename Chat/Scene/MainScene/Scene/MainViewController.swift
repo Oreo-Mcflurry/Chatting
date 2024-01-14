@@ -9,7 +9,13 @@ import UIKit
 import Kingfisher
 
 class MainViewController: UIViewController {
-
+	
+	var filterFriend: [ChatRoom] {
+		if !searchbar.text!.isEmpty {
+			return mockChatList.filter({ $0.chatroomName.contains(searchbar.text!)})
+		}
+		return mockChatList
+	}
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var searchbar: UISearchBar!
 	@IBOutlet weak var seperator: UIView!
@@ -21,21 +27,23 @@ class MainViewController: UIViewController {
 		setDelegate()
 		registerNib()
     }
+
+
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return mockChatList.count
+		return filterFriend.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		if mockChatList[indexPath.row].chatroomImage.count == 1 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: MainFriendTableViewCell.identfier, for: indexPath) as! MainFriendTableViewCell
-			cell.setFriendTableCell(mockChatList[indexPath.row])
+			cell.setFriendTableCell(filterFriend[indexPath.row])
 			return cell
 		} else {
 			let cell = tableView.dequeueReusableCell(withIdentifier: ManyFriendTableViewCell.idnetifier, for: indexPath) as! ManyFriendTableViewCell
-			cell.setFriendTableCell(mockChatList[indexPath.row])
+			cell.setFriendTableCell(filterFriend[indexPath.row])
 			return cell
 		}
 	}
@@ -43,7 +51,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let sb = UIStoryboard(name: ChatViewController.idnetifier, bundle: nil)
 		let vc = sb.instantiateViewController(withIdentifier: ChatViewController.idnetifier) as! ChatViewController
-		vc.data = mockChatList[indexPath.row]
+		vc.data = filterFriend[indexPath.row]
 		navigationController?.pushViewController(vc, animated: true) // navigation
 		tableView.reloadRows(at: [indexPath], with: .none)
 	}
