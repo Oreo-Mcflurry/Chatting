@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -32,40 +33,49 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpP-28-oTS">
-                        <rect key="frame" x="80" y="46" width="41.333333333333343" height="34"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k5-qv-GeZ">
-                        <rect key="frame" x="131.33333333333334" y="59.666666666666664" width="65" height="20.333333333333336"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kn2-cz-x7z">
+                        <rect key="frame" x="80" y="46" width="57.333333333333343" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpP-28-oTS">
+                                <rect key="frame" x="8" y="8" width="41.333333333333336" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="65" id="eMN-t4-aGm"/>
+                            <constraint firstAttribute="trailing" secondItem="FpP-28-oTS" secondAttribute="trailing" constant="8" id="4wW-7e-YAW"/>
+                            <constraint firstItem="FpP-28-oTS" firstAttribute="top" secondItem="kn2-cz-x7z" secondAttribute="top" constant="8" id="W5l-kU-Em2"/>
+                            <constraint firstAttribute="bottom" secondItem="FpP-28-oTS" secondAttribute="bottom" constant="8" id="fJD-ei-UI3"/>
+                            <constraint firstItem="FpP-28-oTS" firstAttribute="leading" secondItem="kn2-cz-x7z" secondAttribute="leading" constant="8" id="g5e-9l-nY1"/>
                         </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k5-qv-GeZ">
+                        <rect key="frame" x="147.33333333333334" y="59.666666666666664" width="41.333333333333343" height="20.333333333333336"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="7k5-qv-GeZ" secondAttribute="trailing" id="1XL-BD-pfm"/>
-                    <constraint firstItem="7k5-qv-GeZ" firstAttribute="leading" secondItem="FpP-28-oTS" secondAttribute="trailing" constant="10" id="9yu-sZ-mWg"/>
+                    <constraint firstAttribute="bottom" secondItem="kn2-cz-x7z" secondAttribute="bottom" constant="15" id="5JS-5t-l16"/>
+                    <constraint firstItem="7k5-qv-GeZ" firstAttribute="leading" secondItem="kn2-cz-x7z" secondAttribute="trailing" constant="10" id="Bma-FT-dt5"/>
                     <constraint firstItem="MaK-aV-mPc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="Brb-zE-RQG"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Cjl-cS-dMX" secondAttribute="trailing" id="FoQ-2r-1qV"/>
                     <constraint firstItem="Cjl-cS-dMX" firstAttribute="top" secondItem="MaK-aV-mPc" secondAttribute="top" id="JtG-Y1-2mT"/>
-                    <constraint firstItem="7k5-qv-GeZ" firstAttribute="bottom" secondItem="FpP-28-oTS" secondAttribute="bottom" id="KUy-b4-Etx"/>
-                    <constraint firstAttribute="bottom" secondItem="FpP-28-oTS" secondAttribute="bottom" constant="15" id="XSY-CS-38T"/>
+                    <constraint firstItem="kn2-cz-x7z" firstAttribute="leading" secondItem="MaK-aV-mPc" secondAttribute="trailing" constant="10" id="NHW-FN-nDi"/>
                     <constraint firstItem="Cjl-cS-dMX" firstAttribute="leading" secondItem="MaK-aV-mPc" secondAttribute="trailing" constant="10" id="ZhK-zH-8ch"/>
                     <constraint firstItem="MaK-aV-mPc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="dP8-Pi-jaJ"/>
-                    <constraint firstItem="FpP-28-oTS" firstAttribute="leading" secondItem="MaK-aV-mPc" secondAttribute="trailing" constant="10" id="hBH-P5-fZq"/>
-                    <constraint firstItem="FpP-28-oTS" firstAttribute="top" secondItem="Cjl-cS-dMX" secondAttribute="bottom" constant="10" id="hoH-Y7-HJx"/>
-                    <constraint firstItem="7k5-qv-GeZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Cjl-cS-dMX" secondAttribute="bottom" constant="10" id="sNR-2S-oqz"/>
+                    <constraint firstItem="7k5-qv-GeZ" firstAttribute="bottom" secondItem="kn2-cz-x7z" secondAttribute="bottom" id="ny3-HR-80I"/>
+                    <constraint firstItem="kn2-cz-x7z" firstAttribute="top" secondItem="Cjl-cS-dMX" secondAttribute="bottom" constant="10" id="q3p-E1-19D"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="7k5-qv-GeZ" secondAttribute="trailing" id="sKd-c9-BTB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="chat" destination="FpP-28-oTS" id="Vg1-Xf-PzW"/>
+                <outlet property="chatBackView" destination="kn2-cz-x7z" id="cMk-Px-iQa"/>
                 <outlet property="date" destination="7k5-qv-GeZ" id="o8P-2c-vLR"/>
                 <outlet property="name" destination="Cjl-cS-dMX" id="aAv-8m-iY6"/>
                 <outlet property="profileImage" destination="MaK-aV-mPc" id="jX7-Jq-kTB"/>
@@ -73,4 +83,9 @@
             <point key="canvasLocation" x="162.59541984732823" y="6.6901408450704229"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

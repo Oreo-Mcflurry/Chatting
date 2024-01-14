@@ -12,6 +12,7 @@ class ReciveTableViewCell: UITableViewCell {
 	static let identifier = "ReciveTableViewCell"
 	@IBOutlet weak var profileImage: UIImageView!
 	@IBOutlet weak var name: UILabel!
+	@IBOutlet weak var chatBackView: UIView!
 	@IBOutlet weak var chat: UILabel!
 	@IBOutlet weak var date: UILabel!
 
@@ -20,7 +21,10 @@ class ReciveTableViewCell: UITableViewCell {
 		profileImage.contentMode = .scaleAspectFill
 		name.font = .boldSystemFont(ofSize: 16)
 		chat.numberOfLines = 0
-		date.font = .systemFont(ofSize: 13)
+		chatBackView.layer.cornerRadius = 8
+		chatBackView.layer.borderColor = UIColor.systemGray2.cgColor
+		chatBackView.layer.borderWidth = 1
+		date.font = .systemFont(ofSize: 12)
 		DispatchQueue.main.async {
 			self.profileImage.layer.cornerRadius = self.profileImage.frame.width / 2
 		}

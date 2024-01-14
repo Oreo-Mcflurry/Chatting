@@ -22,8 +22,8 @@
 		0B8BAA332B52CB9100A0EC40 /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B8BAA322B52CB9100A0EC40 /* ChatViewController.storyboard */; };
 		0B8BAA392B52CC7800A0EC40 /* ReciveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BAA372B52CC7800A0EC40 /* ReciveTableViewCell.swift */; };
 		0B8BAA3A2B52CC7800A0EC40 /* ReciveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8BAA382B52CC7800A0EC40 /* ReciveTableViewCell.xib */; };
-		0B8BAA3F2B52CC9500A0EC40 /* OtherChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BAA3D2B52CC9500A0EC40 /* OtherChatTableViewCell.swift */; };
-		0B8BAA402B52CC9500A0EC40 /* OtherChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8BAA3E2B52CC9500A0EC40 /* OtherChatTableViewCell.xib */; };
+		0B8BAA3F2B52CC9500A0EC40 /* SendChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BAA3D2B52CC9500A0EC40 /* SendChatTableViewCell.swift */; };
+		0B8BAA402B52CC9500A0EC40 /* SendChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8BAA3E2B52CC9500A0EC40 /* SendChatTableViewCell.xib */; };
 		0B8BAA432B52CF0800A0EC40 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BAA422B52CF0800A0EC40 /* UITableViewCell+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +44,8 @@
 		0B8BAA322B52CB9100A0EC40 /* ChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
 		0B8BAA372B52CC7800A0EC40 /* ReciveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciveTableViewCell.swift; sourceTree = "<group>"; };
 		0B8BAA382B52CC7800A0EC40 /* ReciveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReciveTableViewCell.xib; sourceTree = "<group>"; };
-		0B8BAA3D2B52CC9500A0EC40 /* OtherChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherChatTableViewCell.swift; sourceTree = "<group>"; };
-		0B8BAA3E2B52CC9500A0EC40 /* OtherChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherChatTableViewCell.xib; sourceTree = "<group>"; };
+		0B8BAA3D2B52CC9500A0EC40 /* SendChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendChatTableViewCell.swift; sourceTree = "<group>"; };
+		0B8BAA3E2B52CC9500A0EC40 /* SendChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendChatTableViewCell.xib; sourceTree = "<group>"; };
 		0B8BAA422B52CF0800A0EC40 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,8 +192,8 @@
 		0B8BAA362B52CC6000A0EC40 /* Others Chat */ = {
 			isa = PBXGroup;
 			children = (
-				0B8BAA3D2B52CC9500A0EC40 /* OtherChatTableViewCell.swift */,
-				0B8BAA3E2B52CC9500A0EC40 /* OtherChatTableViewCell.xib */,
+				0B8BAA3D2B52CC9500A0EC40 /* SendChatTableViewCell.swift */,
+				0B8BAA3E2B52CC9500A0EC40 /* SendChatTableViewCell.xib */,
 			);
 			path = "Others Chat";
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 				0B8BAA332B52CB9100A0EC40 /* ChatViewController.storyboard in Resources */,
 				0B10EA102B52ADD2006D5636 /* MainFriendTableViewCell.xib in Resources */,
 				0B10E9F72B52AADD006D5636 /* LaunchScreen.storyboard in Resources */,
-				0B8BAA402B52CC9500A0EC40 /* OtherChatTableViewCell.xib in Resources */,
+				0B8BAA402B52CC9500A0EC40 /* SendChatTableViewCell.xib in Resources */,
 				0B10E9F42B52AADD006D5636 /* Assets.xcassets in Resources */,
 				0B10E9F22B52AADC006D5636 /* Main.storyboard in Resources */,
 				0B8BAA3A2B52CC7800A0EC40 /* ReciveTableViewCell.xib in Resources */,
@@ -296,7 +296,7 @@
 				0B8BAA392B52CC7800A0EC40 /* ReciveTableViewCell.swift in Sources */,
 				0B10EA082B52AC2E006D5636 /* MainViewController.swift in Sources */,
 				0B8BAA2C2B52B17500A0EC40 /* TableViewProtocol.swift in Sources */,
-				0B8BAA3F2B52CC9500A0EC40 /* OtherChatTableViewCell.swift in Sources */,
+				0B8BAA3F2B52CC9500A0EC40 /* SendChatTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
