@@ -29,9 +29,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: MainFriendTableViewCell.identfier, for: indexPath) as! MainFriendTableViewCell
-		cell.setFriendTableCell(mockChatList[indexPath.row])
-		return cell
+		if mockChatList[indexPath.row].chatroomImage.count == 1 {
+			let cell = tableView.dequeueReusableCell(withIdentifier: MainFriendTableViewCell.identfier, for: indexPath) as! MainFriendTableViewCell
+			cell.setFriendTableCell(mockChatList[indexPath.row])
+			return cell
+		} else {
+			let cell = tableView.dequeueReusableCell(withIdentifier: ManyFriendTableViewCell.idnetifier, for: indexPath) as! ManyFriendTableViewCell
+			cell.setFriendTableCell(mockChatList[indexPath.row])
+			return cell
+		}
 	}
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -45,6 +51,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 extension MainViewController: TableViewProtocol {
 	func registerNib() {
 		tableView.register(UINib(nibName: MainFriendTableViewCell.identfier, bundle: nil), forCellReuseIdentifier:  MainFriendTableViewCell.identfier)
+
+		tableView.register(UINib(nibName: ManyFriendTableViewCell.idnetifier, bundle: nil), forCellReuseIdentifier: ManyFriendTableViewCell.idnetifier)
 	}
 
 	func setDelegate() {

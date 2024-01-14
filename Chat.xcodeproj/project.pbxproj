@@ -18,6 +18,8 @@
 		0B10EA0F2B52ADD2006D5636 /* MainFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B10EA0D2B52ADD2006D5636 /* MainFriendTableViewCell.swift */; };
 		0B10EA102B52ADD2006D5636 /* MainFriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B10EA0E2B52ADD2006D5636 /* MainFriendTableViewCell.xib */; };
 		0B5FF97A2B541FA600A9044D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B5FF9792B541FA600A9044D /* IQKeyboardManagerSwift */; };
+		0B5FF97E2B54272E00A9044D /* ManyFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5FF97C2B54272E00A9044D /* ManyFriendTableViewCell.swift */; };
+		0B5FF97F2B54272E00A9044D /* ManyFriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B5FF97D2B54272E00A9044D /* ManyFriendTableViewCell.xib */; };
 		0B8BAA2C2B52B17500A0EC40 /* TableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BAA2B2B52B17500A0EC40 /* TableViewProtocol.swift */; };
 		0B8BAA312B52CB8100A0EC40 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BAA302B52CB8100A0EC40 /* ChatViewController.swift */; };
 		0B8BAA332B52CB9100A0EC40 /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B8BAA322B52CB9100A0EC40 /* ChatViewController.storyboard */; };
@@ -40,6 +42,8 @@
 		0B10EA072B52AC2E006D5636 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0B10EA0D2B52ADD2006D5636 /* MainFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFriendTableViewCell.swift; sourceTree = "<group>"; };
 		0B10EA0E2B52ADD2006D5636 /* MainFriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainFriendTableViewCell.xib; sourceTree = "<group>"; };
+		0B5FF97C2B54272E00A9044D /* ManyFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManyFriendTableViewCell.swift; sourceTree = "<group>"; };
+		0B5FF97D2B54272E00A9044D /* ManyFriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManyFriendTableViewCell.xib; sourceTree = "<group>"; };
 		0B8BAA2B2B52B17500A0EC40 /* TableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProtocol.swift; sourceTree = "<group>"; };
 		0B8BAA302B52CB8100A0EC40 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0B8BAA322B52CB9100A0EC40 /* ChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
@@ -142,9 +146,19 @@
 		0B10EA0A2B52AD78006D5636 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				0B5FF97B2B54271000A9044D /* manyFriend */,
 				0B8BAA2D2B52CAFC00A0EC40 /* oneFriend */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		0B5FF97B2B54271000A9044D /* manyFriend */ = {
+			isa = PBXGroup;
+			children = (
+				0B5FF97C2B54272E00A9044D /* ManyFriendTableViewCell.swift */,
+				0B5FF97D2B54272E00A9044D /* ManyFriendTableViewCell.xib */,
+			);
+			path = manyFriend;
 			sourceTree = "<group>";
 		};
 		0B8BAA2A2B52B16500A0EC40 /* Protocol */ = {
@@ -278,6 +292,7 @@
 				0B10EA102B52ADD2006D5636 /* MainFriendTableViewCell.xib in Resources */,
 				0B10E9F72B52AADD006D5636 /* LaunchScreen.storyboard in Resources */,
 				0B8BAA402B52CC9500A0EC40 /* SendChatTableViewCell.xib in Resources */,
+				0B5FF97F2B54272E00A9044D /* ManyFriendTableViewCell.xib in Resources */,
 				0B10E9F42B52AADD006D5636 /* Assets.xcassets in Resources */,
 				0B10E9F22B52AADC006D5636 /* Main.storyboard in Resources */,
 				0B8BAA3A2B52CC7800A0EC40 /* ReciveTableViewCell.xib in Resources */,
@@ -291,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B5FF97E2B54272E00A9044D /* ManyFriendTableViewCell.swift in Sources */,
 				0B10E9FF2B52AAFE006D5636 /* ChattingData.swift in Sources */,
 				0B8BAA432B52CF0800A0EC40 /* UITableViewCell+Extension.swift in Sources */,
 				0B10E9EB2B52AADC006D5636 /* AppDelegate.swift in Sources */,
