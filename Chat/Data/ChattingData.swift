@@ -23,18 +23,31 @@ enum User: String {
 }
 
 //트래블톡 화면에서 사용할 데이터 구조체
-struct ChatRoom {
+class ChatRoom {
     let chatroomId: Int //채팅방 고유 ID
     let chatroomImage: [String] //채팅방 이미지
     let chatroomName: String //채팅방 이름
     var chatList: [Chat] = [] //채팅 화면에서 사용할 데이터
+
+	init(chatroomId: Int, chatroomImage: [String], chatroomName: String, chatList: [Chat]) {
+		self.chatroomId = chatroomId
+		self.chatroomImage = chatroomImage
+		self.chatroomName = chatroomName
+		self.chatList = chatList
+	}
 }
 
 //채팅 화면에서 사용할 데이터 구조체
-struct Chat {
+class Chat {
     let user: User
     let date: String
     let message: String
+
+	init(user: User, date: String, message: String) {
+		self.user = user
+		self.date = date
+		self.message = message
+	}
 }
 
 

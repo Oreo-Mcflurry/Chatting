@@ -50,7 +50,9 @@
                             <constraint firstItem="rkJ-vC-fRM" firstAttribute="top" secondItem="tpG-6s-0CV" secondAttribute="bottom" id="wnI-sX-SmQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TRAVEL TALK" id="0gy-1J-73q"/>
+                    <navigationItem key="navigationItem" title="TRAVEL TALK" id="0gy-1J-73q">
+                        <barButtonItem key="backBarButtonItem" title=" " id="9EX-dO-mvv"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchbar" destination="tpG-6s-0CV" id="fXX-jE-AsK"/>
                         <outlet property="seperator" destination="rkJ-vC-fRM" id="3p4-RL-4wd"/>

@@ -10,9 +10,11 @@ import UIKit
 class ChatViewController: UIViewController {
 
 	static let idnetifier = "ChatViewController"
-	var data = ChatRoom(chatroomId: 0, chatroomImage: [], chatroomName: "")
+	var data = ChatRoom(chatroomId: 0, chatroomImage: [], chatroomName: "", chatList: [])
 	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var separator: UIView!
 	@IBOutlet weak var textField: UITextField!
+	@IBOutlet weak var sendButton: UIButton!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		registerNib()
@@ -24,7 +26,9 @@ class ChatViewController: UIViewController {
 	}
 
 	@IBAction func enterTextField(_ sender: Any) {
-
+		data.chatList.append(Chat(user: .user, date: formatDate(.chat, Date()), message: textField.text!))
+		textField.text = ""
+		tableView.reloadData()
 	}
 }
 

@@ -19,10 +19,10 @@ class MainFriendTableViewCell: UITableViewCell {
 		super.awakeFromNib()
 		profileImage.contentMode = .scaleAspectFill
 		name.font = .boldSystemFont(ofSize: 16)
-		date.textColor = .systemGray3
+		date.textColor = .systemGray2
 		date.font = .systemFont(ofSize: 13)
 		date.textAlignment = .center
-		lastTalk.textColor = .systemGray3
+		lastTalk.textColor = .systemGray2
 		lastTalk.font = .systemFont(ofSize: 14)
 		DispatchQueue.main.async {
 			self.profileImage.layer.cornerRadius = self.profileImage.frame.width/2
