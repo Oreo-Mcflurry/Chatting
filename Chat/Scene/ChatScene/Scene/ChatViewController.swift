@@ -23,12 +23,15 @@ class ChatViewController: UIViewController {
 		tableView.separatorStyle = .none
 		tableView.selectionFollowsFocus = false
 		tableView.rowHeight = UITableView.automaticDimension
+		sendButton.setTitle("", for: .normal)
+		sendButton.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
 	}
 
 	@IBAction func enterTextField(_ sender: Any) {
 		data.chatList.append(Chat(user: .user, date: formatDate(.chat, Date()), message: textField.text!))
 		textField.text = ""
 		tableView.reloadData()
+		view.endEditing(true)
 	}
 }
 

@@ -7,6 +7,7 @@
 
 import UIKit
 
+// extension UIView {
 func formatDate(_ dateKind: DateKind, _ date: Date) -> String {
 	let formatter = DateFormatter()
 	formatter.dateFormat = dateKind.rawValue
@@ -16,6 +17,7 @@ func formatDate(_ dateKind: DateKind, _ date: Date) -> String {
 
 func formatDate(_ dateKind: DateKind, _ date: String) -> String {
 	let formatter = DateFormatter()
+	formatter.dateFormat = "yyyy-MM-dd hh:mm"
 	let newDate = formatter.date(from: date) ?? Date()
 	formatter.dateFormat = dateKind.rawValue
 	formatter.locale = Locale(identifier: "ko_KR")
@@ -26,3 +28,4 @@ enum DateKind: String {
 	case chat = "hh:mm a"
 }
 
+//}
