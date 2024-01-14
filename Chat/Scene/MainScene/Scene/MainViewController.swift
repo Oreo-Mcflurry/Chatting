@@ -45,6 +45,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 		let vc = sb.instantiateViewController(withIdentifier: ChatViewController.idnetifier) as! ChatViewController
 		vc.data = mockChatList[indexPath.row]
 		navigationController?.pushViewController(vc, animated: true) // navigation
+		tableView.reloadRows(at: [indexPath], with: .none)
 	}
 }
 

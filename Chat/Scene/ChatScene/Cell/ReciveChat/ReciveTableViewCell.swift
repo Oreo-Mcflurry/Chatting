@@ -19,6 +19,8 @@ class ReciveTableViewCell: UITableViewCell {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		profileImage.contentMode = .scaleAspectFill
+		profileImage.layer.borderColor = UIColor.systemGray3.cgColor
+		profileImage.layer.borderWidth = 1
 		name.font = .boldSystemFont(ofSize: 16)
 		chat.numberOfLines = 0
 		chatBackView.layer.cornerRadius = 8

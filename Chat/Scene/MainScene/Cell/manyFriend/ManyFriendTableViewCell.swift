@@ -27,6 +27,8 @@ class ManyFriendTableViewCell: UITableViewCell {
 		DispatchQueue.main.async {
 			for item in self.friends {
 				item.contentMode = .scaleAspectFill
+				item.layer.borderColor = UIColor.systemGray3.cgColor
+				item.layer.borderWidth = 1
 				item.layer.cornerRadius = item.frame.width / 2
 			}
 		}

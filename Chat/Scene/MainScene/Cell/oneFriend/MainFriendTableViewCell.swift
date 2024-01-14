@@ -18,6 +18,8 @@ class MainFriendTableViewCell: UITableViewCell {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		profileImage.contentMode = .scaleAspectFill
+		profileImage.layer.borderColor = UIColor.systemGray3.cgColor
+		profileImage.layer.borderWidth = 1
 		name.font = .boldSystemFont(ofSize: 16)
 		date.textColor = .systemGray2
 		date.font = .systemFont(ofSize: 13)

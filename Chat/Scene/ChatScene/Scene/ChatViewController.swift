@@ -20,18 +20,26 @@ class ChatViewController: UIViewController {
 		registerNib()
 		setDelegate()
 		navigationItem.title = data.chatroomName
+
 		tableView.separatorStyle = .none
-		tableView.selectionFollowsFocus = false
+		tableView.allowsSelection = false
 		tableView.rowHeight = UITableView.automaticDimension
+
 		sendButton.setTitle("", for: .normal)
 		sendButton.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
+
+		textField.borderStyle = .roundedRect
+		textField.backgroundColor = .systemGray6
+		textField.placeholder = "메시지를 입력해주세요"
 	}
 
 	@IBAction func enterTextField(_ sender: Any) {
-		data.chatList.append(Chat(user: .user, date: formatDate(.chat, Date()), message: textField.text!))
-		textField.text = ""
-		tableView.reloadData()
-		view.endEditing(true)
+		if !textField.text!.isEmpty {
+			data.chatList.append(Chat(user: .user, date: formatDate(.chat, Date()), message: textField.text!))
+			textField.text = ""
+			tableView.reloadData()
+			view.endEditing(true)
+		}
 	}
 }
 
@@ -45,7 +53,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 		// 삼항연산자로 처리하려고 했는데, 코드가 그렇게 이쁘게 나올것 같지 않아서 이렇게 해봤습니다.
 		if bool {
 			let cell = tableView.dequeueReusableCell(withIdentifier: SendChatTableViewCell.identifier, for: indexPath) as! SendChatTableViewCell
-
+			
 			cell.setCell(data.chatList[indexPath.row])
 			return cell
 		} else {

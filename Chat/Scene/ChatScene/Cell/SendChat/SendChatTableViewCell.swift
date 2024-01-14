@@ -18,6 +18,7 @@ class SendChatTableViewCell: UITableViewCell {
 		super.awakeFromNib()
 		chatLabel.numberOfLines = 0
 		chatBackView.layer.cornerRadius = 8
+		chatBackView.backgroundColor = .systemGray5
 		chatBackView.layer.borderColor = UIColor.systemGray2.cgColor
 		chatBackView.layer.borderWidth = 1
 		dateLabel.font = .systemFont(ofSize: 12)

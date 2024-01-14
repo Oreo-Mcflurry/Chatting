@@ -190,28 +190,28 @@
 		0B8BAA2F2B52CB6D00A0EC40 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				0B8BAA362B52CC6000A0EC40 /* Others Chat */,
-				0B8BAA352B52CC5000A0EC40 /* My Chat */,
+				0B8BAA362B52CC6000A0EC40 /* SendChat */,
+				0B8BAA352B52CC5000A0EC40 /* ReciveChat */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		0B8BAA352B52CC5000A0EC40 /* My Chat */ = {
+		0B8BAA352B52CC5000A0EC40 /* ReciveChat */ = {
 			isa = PBXGroup;
 			children = (
 				0B8BAA372B52CC7800A0EC40 /* ReciveTableViewCell.swift */,
 				0B8BAA382B52CC7800A0EC40 /* ReciveTableViewCell.xib */,
 			);
-			path = "My Chat";
+			path = ReciveChat;
 			sourceTree = "<group>";
 		};
-		0B8BAA362B52CC6000A0EC40 /* Others Chat */ = {
+		0B8BAA362B52CC6000A0EC40 /* SendChat */ = {
 			isa = PBXGroup;
 			children = (
 				0B8BAA3D2B52CC9500A0EC40 /* SendChatTableViewCell.swift */,
 				0B8BAA3E2B52CC9500A0EC40 /* SendChatTableViewCell.xib */,
 			);
-			path = "Others Chat";
+			path = SendChat;
 			sourceTree = "<group>";
 		};
 		0B8BAA412B52CED500A0EC40 /* Extension */ = {
