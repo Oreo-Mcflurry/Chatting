@@ -34,7 +34,7 @@ class ReciveTableViewCell: UITableViewCell {
 		super.setSelected(selected, animated: animated)
 	}
 
-	func setCells(_ data: Chat) {
+	func setCell(_ data: Chat) {
 		profileImage.image = UIImage(named: data.user.profileImage)
 		name.text = data.user.rawValue
 		chat.text = data.message

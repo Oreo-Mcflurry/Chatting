@@ -7,17 +7,29 @@
 
 import UIKit
 
-class OtherChatTableViewCell: UITableViewCell {
+class SendChatTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+	static let identifier = "SendChatTableViewCell"
+	@IBOutlet weak var chatBackView: UIView!
+	@IBOutlet weak var chatLabel: UILabel!
+	@IBOutlet weak var dateLabel: UILabel!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		chatLabel.numberOfLines = 0
+		chatBackView.layer.cornerRadius = 8
+		chatBackView.layer.borderColor = UIColor.systemGray2.cgColor
+		chatBackView.layer.borderWidth = 1
+		dateLabel.font = .systemFont(ofSize: 12)
+	}
 
-        // Configure the view for the selected state
-    }
-    
+	override func setSelected(_ selected: Bool, animated: Bool) {
+		super.setSelected(selected, animated: animated)
+	}
+
+	func setCell(_ data: Chat) {
+		chatLabel.text = data.message
+		dateLabel.text = formatDate(.chat, data.date)
+	}
+
 }
