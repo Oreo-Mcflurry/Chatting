@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tpG-6s-0CV">
-                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <rect key="frame" x="10" y="103" width="373" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="DD7-ze-cIU" id="GKo-hc-pdE"/>
@@ -38,15 +38,15 @@
                         <viewLayoutGuide key="safeArea" id="yMW-2Y-4fQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tpG-6s-0CV" firstAttribute="trailing" secondItem="yMW-2Y-4fQ" secondAttribute="trailing" id="1tM-yn-9bN"/>
-                            <constraint firstItem="tpG-6s-0CV" firstAttribute="leading" secondItem="yMW-2Y-4fQ" secondAttribute="leading" id="9Om-hN-E7A"/>
                             <constraint firstItem="yMW-2Y-4fQ" firstAttribute="trailing" secondItem="6Gz-0r-ebh" secondAttribute="trailing" id="DpX-sn-WLW"/>
                             <constraint firstItem="6Gz-0r-ebh" firstAttribute="top" secondItem="rkJ-vC-fRM" secondAttribute="bottom" id="SOQ-fj-LRC"/>
+                            <constraint firstAttribute="trailing" secondItem="tpG-6s-0CV" secondAttribute="trailing" constant="10" id="bMP-jQ-RSE"/>
                             <constraint firstItem="yMW-2Y-4fQ" firstAttribute="trailing" secondItem="rkJ-vC-fRM" secondAttribute="trailing" id="bpf-1l-1ka"/>
                             <constraint firstItem="rkJ-vC-fRM" firstAttribute="leading" secondItem="yMW-2Y-4fQ" secondAttribute="leading" id="ekb-Rb-tf2"/>
                             <constraint firstAttribute="bottom" secondItem="6Gz-0r-ebh" secondAttribute="bottom" id="gah-2d-U7k"/>
                             <constraint firstItem="tpG-6s-0CV" firstAttribute="top" secondItem="yMW-2Y-4fQ" secondAttribute="top" id="q7R-jm-rBj"/>
                             <constraint firstItem="6Gz-0r-ebh" firstAttribute="leading" secondItem="yMW-2Y-4fQ" secondAttribute="leading" id="rMQ-Lj-uRR"/>
+                            <constraint firstItem="tpG-6s-0CV" firstAttribute="leading" secondItem="yMW-2Y-4fQ" secondAttribute="leading" constant="10" id="rP7-uf-ag0"/>
                             <constraint firstItem="rkJ-vC-fRM" firstAttribute="top" secondItem="tpG-6s-0CV" secondAttribute="bottom" id="wnI-sX-SmQ"/>
                         </constraints>
                     </view>

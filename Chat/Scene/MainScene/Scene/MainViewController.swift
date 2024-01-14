@@ -16,6 +16,8 @@ class MainViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		tableView.separatorStyle = .none
+		tableView.rowHeight = UITableView.automaticDimension
+		searchbar.placeholder = "친구 이름을 검색해보세요"
 		setDelegate()
 		registerNib()
     }
@@ -32,14 +34,21 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 		return cell
 	}
 
-	func setDelegate() {
-		tableView.delegate = self
-		tableView.dataSource = self
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let sb = UIStoryboard(name: ChatViewController.idnetifier, bundle: nil)
+		let vc = sb.instantiateViewController(withIdentifier: ChatViewController.idnetifier) as! ChatViewController
+		vc.data = mockChatList[indexPath.row]
+		navigationController?.pushViewController(vc, animated: true) // navigation
 	}
 }
 
 extension MainViewController: TableViewProtocol {
 	func registerNib() {
 		tableView.register(UINib(nibName: MainFriendTableViewCell.identfier, bundle: nil), forCellReuseIdentifier:  MainFriendTableViewCell.identfier)
+	}
+
+	func setDelegate() {
+		tableView.delegate = self
+		tableView.dataSource = self
 	}
 }

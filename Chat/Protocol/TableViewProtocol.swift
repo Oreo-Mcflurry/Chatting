@@ -8,6 +8,6 @@
 import Foundation
 
 protocol TableViewProtocol {
-//	func setDelegate()
+	func setDelegate()
 	func registerNib()
 }

@@ -18,6 +18,13 @@
 		0B10EA0F2B52ADD2006D5636 /* MainFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B10EA0D2B52ADD2006D5636 /* MainFriendTableViewCell.swift */; };
 		0B10EA102B52ADD2006D5636 /* MainFriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B10EA0E2B52ADD2006D5636 /* MainFriendTableViewCell.xib */; };
 		0B8BAA2C2B52B17500A0EC40 /* TableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BAA2B2B52B17500A0EC40 /* TableViewProtocol.swift */; };
+		0B8BAA312B52CB8100A0EC40 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BAA302B52CB8100A0EC40 /* ChatViewController.swift */; };
+		0B8BAA332B52CB9100A0EC40 /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B8BAA322B52CB9100A0EC40 /* ChatViewController.storyboard */; };
+		0B8BAA392B52CC7800A0EC40 /* ReciveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BAA372B52CC7800A0EC40 /* ReciveTableViewCell.swift */; };
+		0B8BAA3A2B52CC7800A0EC40 /* ReciveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8BAA382B52CC7800A0EC40 /* ReciveTableViewCell.xib */; };
+		0B8BAA3F2B52CC9500A0EC40 /* OtherChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BAA3D2B52CC9500A0EC40 /* OtherChatTableViewCell.swift */; };
+		0B8BAA402B52CC9500A0EC40 /* OtherChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8BAA3E2B52CC9500A0EC40 /* OtherChatTableViewCell.xib */; };
+		0B8BAA432B52CF0800A0EC40 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BAA422B52CF0800A0EC40 /* UITableViewCell+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +40,13 @@
 		0B10EA0D2B52ADD2006D5636 /* MainFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFriendTableViewCell.swift; sourceTree = "<group>"; };
 		0B10EA0E2B52ADD2006D5636 /* MainFriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainFriendTableViewCell.xib; sourceTree = "<group>"; };
 		0B8BAA2B2B52B17500A0EC40 /* TableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProtocol.swift; sourceTree = "<group>"; };
+		0B8BAA302B52CB8100A0EC40 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		0B8BAA322B52CB9100A0EC40 /* ChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
+		0B8BAA372B52CC7800A0EC40 /* ReciveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciveTableViewCell.swift; sourceTree = "<group>"; };
+		0B8BAA382B52CC7800A0EC40 /* ReciveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReciveTableViewCell.xib; sourceTree = "<group>"; };
+		0B8BAA3D2B52CC9500A0EC40 /* OtherChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherChatTableViewCell.swift; sourceTree = "<group>"; };
+		0B8BAA3E2B52CC9500A0EC40 /* OtherChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherChatTableViewCell.xib; sourceTree = "<group>"; };
+		0B8BAA422B52CF0800A0EC40 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +80,7 @@
 		0B10E9E92B52AADC006D5636 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				0B8BAA412B52CED500A0EC40 /* Extension */,
 				0B8BAA2A2B52B16500A0EC40 /* Protocol */,
 				0B10EA012B52AB7E006D5636 /* Scene */,
 				0B10EA002B52AB64006D5636 /* Data */,
@@ -107,6 +122,8 @@
 		0B10EA062B52AC13006D5636 /* ChatScene */ = {
 			isa = PBXGroup;
 			children = (
+				0B8BAA2F2B52CB6D00A0EC40 /* Cell */,
+				0B8BAA2E2B52CB6A00A0EC40 /* Scene */,
 			);
 			path = ChatScene;
 			sourceTree = "<group>";
@@ -123,8 +140,7 @@
 		0B10EA0A2B52AD78006D5636 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				0B10EA0D2B52ADD2006D5636 /* MainFriendTableViewCell.swift */,
-				0B10EA0E2B52ADD2006D5636 /* MainFriendTableViewCell.xib */,
+				0B8BAA2D2B52CAFC00A0EC40 /* oneFriend */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -135,6 +151,59 @@
 				0B8BAA2B2B52B17500A0EC40 /* TableViewProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		0B8BAA2D2B52CAFC00A0EC40 /* oneFriend */ = {
+			isa = PBXGroup;
+			children = (
+				0B10EA0D2B52ADD2006D5636 /* MainFriendTableViewCell.swift */,
+				0B10EA0E2B52ADD2006D5636 /* MainFriendTableViewCell.xib */,
+			);
+			path = oneFriend;
+			sourceTree = "<group>";
+		};
+		0B8BAA2E2B52CB6A00A0EC40 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0B8BAA302B52CB8100A0EC40 /* ChatViewController.swift */,
+				0B8BAA322B52CB9100A0EC40 /* ChatViewController.storyboard */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		0B8BAA2F2B52CB6D00A0EC40 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0B8BAA362B52CC6000A0EC40 /* Others Chat */,
+				0B8BAA352B52CC5000A0EC40 /* My Chat */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0B8BAA352B52CC5000A0EC40 /* My Chat */ = {
+			isa = PBXGroup;
+			children = (
+				0B8BAA372B52CC7800A0EC40 /* ReciveTableViewCell.swift */,
+				0B8BAA382B52CC7800A0EC40 /* ReciveTableViewCell.xib */,
+			);
+			path = "My Chat";
+			sourceTree = "<group>";
+		};
+		0B8BAA362B52CC6000A0EC40 /* Others Chat */ = {
+			isa = PBXGroup;
+			children = (
+				0B8BAA3D2B52CC9500A0EC40 /* OtherChatTableViewCell.swift */,
+				0B8BAA3E2B52CC9500A0EC40 /* OtherChatTableViewCell.xib */,
+			);
+			path = "Others Chat";
+			sourceTree = "<group>";
+		};
+		0B8BAA412B52CED500A0EC40 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0B8BAA422B52CF0800A0EC40 /* UITableViewCell+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,10 +270,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B8BAA332B52CB9100A0EC40 /* ChatViewController.storyboard in Resources */,
 				0B10EA102B52ADD2006D5636 /* MainFriendTableViewCell.xib in Resources */,
 				0B10E9F72B52AADD006D5636 /* LaunchScreen.storyboard in Resources */,
+				0B8BAA402B52CC9500A0EC40 /* OtherChatTableViewCell.xib in Resources */,
 				0B10E9F42B52AADD006D5636 /* Assets.xcassets in Resources */,
 				0B10E9F22B52AADC006D5636 /* Main.storyboard in Resources */,
+				0B8BAA3A2B52CC7800A0EC40 /* ReciveTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,11 +288,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B10E9FF2B52AAFE006D5636 /* ChattingData.swift in Sources */,
+				0B8BAA432B52CF0800A0EC40 /* UITableViewCell+Extension.swift in Sources */,
 				0B10E9EB2B52AADC006D5636 /* AppDelegate.swift in Sources */,
 				0B10E9ED2B52AADC006D5636 /* SceneDelegate.swift in Sources */,
+				0B8BAA312B52CB8100A0EC40 /* ChatViewController.swift in Sources */,
 				0B10EA0F2B52ADD2006D5636 /* MainFriendTableViewCell.swift in Sources */,
+				0B8BAA392B52CC7800A0EC40 /* ReciveTableViewCell.swift in Sources */,
 				0B10EA082B52AC2E006D5636 /* MainViewController.swift in Sources */,
 				0B8BAA2C2B52B17500A0EC40 /* TableViewProtocol.swift in Sources */,
+				0B8BAA3F2B52CC9500A0EC40 /* OtherChatTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

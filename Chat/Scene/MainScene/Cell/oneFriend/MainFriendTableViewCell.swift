@@ -37,16 +37,6 @@ class MainFriendTableViewCell: UITableViewCell {
 		profileImage.image = UIImage(named: data.chatroomImage[0])
 		name.text = data.chatroomName
 		lastTalk.text = data.chatList.last?.message
-		date.text = formatDate(data.chatList.last!.date)
-	}
-}
-
-extension UITableViewCell {
-	func formatDate(_ date: String) -> String {
-		let formatter = DateFormatter()
-		let newDate = formatter.date(from: date) ?? Date()
-		formatter.dateFormat = "yy.MM.dd"
-		
-		return formatter.string(from: newDate)
+		date.text = formatDate(.main, data.chatList.last!.date)
 	}
 }
